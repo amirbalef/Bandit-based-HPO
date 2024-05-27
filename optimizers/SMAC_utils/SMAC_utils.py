@@ -31,6 +31,7 @@ if TYPE_CHECKING:
     from amltk.types import FidT, Seed
 
 from smac.model.random_forest.random_forest import RandomForest
+
 logger = logging.getLogger(__name__)
 from smac.initial_design import AbstractInitialDesign
 
@@ -49,20 +50,24 @@ import types
 from ConfigSpace.configuration_space import Configuration
 from ConfigSpace.hyperparameters import Constant
 
+
 class FixedSetRandomInitialDesign(AbstractInitialDesign):
     """Initial design that evaluates random configurations."""
 
-    def __init__(self, limit_to_configs: list , *args: Any, **kwargs: Any) -> None:
+    def __init__(self, limit_to_configs: list, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
 
         self.limit_to_configs = limit_to_configs
 
     def _select_configurations(self) -> list[Configuration]:
-        configs_indx = self._rng.randint(0, len(self.limit_to_configs), size=self._n_configs)
-        configs = [ self.limit_to_configs[i] for i in configs_indx]
+        configs_indx = self._rng.randint(
+            0, len(self.limit_to_configs), size=self._n_configs
+        )
+        configs = [self.limit_to_configs[i] for i in configs_indx]
         for config in configs:
             config.origin = "Initial Design: FixedSet Random"
         return configs
+
 
 def select_configurations(initial_class) -> list[Configuration]:
     """Selects the initial configurations. Internally, `_select_configurations` is called,
@@ -73,7 +78,7 @@ def select_configurations(initial_class) -> list[Configuration]:
     configs : list[Configuration]
         Configurations from the child class.
     """
-    
+
     configs: list[Configuration] = []
 
     # Adding additional configs
@@ -96,10 +101,9 @@ def select_configurations(initial_class) -> list[Configuration]:
         f"and {len(initial_class._additional_configs)} additional configurations."
     )
 
-    #print("initial design")
+    # print("initial design")
 
     return configs
-
 
 
 from typing import Callable, Iterator
@@ -108,6 +112,7 @@ from ConfigSpace import Configuration, ConfigurationSpace
 
 from smac.random_design.abstract_random_design import AbstractRandomDesign
 from smac.random_design.modulus_design import ModulusRandomDesign
+
 
 class ChallengerList(Iterator):
     """Helper class to interleave random configurations in a list of challengers.
@@ -133,14 +138,16 @@ class ChallengerList(Iterator):
         challenger_callback: Callable,
         configurations: list,
         random_design: AbstractRandomDesign | None = ModulusRandomDesign(modulus=2.0),
-        rng = None,
+        rng=None,
         previous_configs: list = None,
     ):
         self._challengers_callback = challenger_callback
         self._challengers: list[Configuration] | None = None
         self._configspace = configspace
         self._index = 0
-        self._iteration = 1  # 1-based to prevent from starting with a random configuration
+        self._iteration = (
+            1  # 1-based to prevent from starting with a random configuration
+        )
         self._random_design = random_design
         self._configurations = configurations
         self._rng = rng
@@ -162,9 +169,13 @@ class ChallengerList(Iterator):
         # If we want to interleave challengers with random configs, sample one
         else:
             if self._random_design.check(self._iteration):
-                configurations = [config for config in self._configurations if config not in self._previous_configs ]
-                config =  configurations[self._rng.randint(0, len(configurations))]
-                #config = self._configspace.sample_configuration()
+                configurations = [
+                    config
+                    for config in self._configurations
+                    if config not in self._previous_configs
+                ]
+                config = configurations[self._rng.randint(0, len(configurations))]
+                # config = self._configspace.sample_configuration()
                 config.origin = "FixedSet Random Search"
             else:
                 if self._challengers is None:
@@ -182,10 +193,16 @@ class ChallengerList(Iterator):
 
         return len(self._challengers) - self._index
 
-from smac.acquisition.maximizer.abstract_acqusition_maximizer import AbstractAcquisitionMaximizer
-from smac.acquisition.function.abstract_acquisition_function import AbstractAcquisitionFunction
+
+from smac.acquisition.maximizer.abstract_acqusition_maximizer import (
+    AbstractAcquisitionMaximizer,
+)
+from smac.acquisition.function.abstract_acquisition_function import (
+    AbstractAcquisitionFunction,
+)
 
 from smac.runhistory.runhistory import RunHistory
+
 
 class FixedSet(AbstractAcquisitionMaximizer):
     def __init__(
@@ -208,7 +225,10 @@ class FixedSet(AbstractAcquisitionMaximizer):
         rng : np.random.RandomState or int, optional
         """
         super().__init__(
-            acquisition_function=acquisition_function, configspace=configspace, challengers=challengers, seed=seed
+            acquisition_function=acquisition_function,
+            configspace=configspace,
+            challengers=challengers,
+            seed=seed,
         )
         self.configurations = configurations
 
@@ -256,7 +276,7 @@ class FixedSet(AbstractAcquisitionMaximizer):
             self.configurations,
             random_design,
             self._rng,
-            previous_configs
+            previous_configs,
         )
         print("challengers", challengers)
 
@@ -264,17 +284,21 @@ class FixedSet(AbstractAcquisitionMaximizer):
             random_design.next_iteration()
 
         return challengers
+
     def _maximize(
         self,
         previous_configs: list[Configuration],
         n_points: int,
     ) -> list[tuple[float, Configuration]]:
-        configurations = [copy.deepcopy(config) for config in self.configurations if config not in previous_configs ]
+        configurations = [
+            copy.deepcopy(config)
+            for config in self.configurations
+            if config not in previous_configs
+        ]
         for config in configurations:
             config.origin = "Fixed Set"
         res = self._sort_by_acquisition_value(configurations)
         return res
-
 
 
 class SMACOptimizer(Optimizer[SMACTrialInfo]):
@@ -318,13 +342,12 @@ class SMACOptimizer(Optimizer[SMACTrialInfo]):
         fidelities: Mapping[str, FidT] | None = None,
         continue_from_last_run: bool = False,
         logging_level: int | Path | Literal[False] | None = False,
-        acquisition_maximizer:AbstractAcquisitionMaximizer = None,
-        acquisition_function:AbstractAcquisitionFunction = None,
-        random_design = None,
+        acquisition_maximizer: AbstractAcquisitionMaximizer = None,
+        acquisition_function: AbstractAcquisitionFunction = None,
+        random_design=None,
         initial_configs=None,
-        n_configs = None,
-        n_trials = 100,
-
+        n_configs=None,
+        n_trials=100,
     ) -> Self:
         """Create a new SMAC optimizer using either the HPO facade or
         a mutli-fidelity facade.
@@ -388,34 +411,37 @@ class SMACOptimizer(Optimizer[SMACTrialInfo]):
                 output_directory=bucket.path / "smac3_output",
                 deterministic=deterministic,
                 objectives=metric_names,
-                n_trials = n_trials,
+                n_trials=n_trials,
                 crash_cost=cls.crash_cost(metrics),
             )
             facade_cls = HyperparameterOptimizationFacade
-        if(acquisition_function!=None):
+        if acquisition_function != None:
             model = RandomForest(
-                        log_y=True,
-                        n_trees=10,
-                        bootstrapping=True,
-                        ratio_features=1.0,
-                        min_samples_split=2,
-                        min_samples_leaf=1,
-                        max_depth= 2**20,
-                        configspace=scenario.configspace,
-                        instance_features=scenario.instance_features,
-                        seed=scenario.seed
-                    )
+                log_y=True,
+                n_trees=10,
+                bootstrapping=True,
+                ratio_features=1.0,
+                min_samples_split=2,
+                min_samples_leaf=1,
+                max_depth=2**20,
+                configspace=scenario.configspace,
+                instance_features=scenario.instance_features,
+                seed=scenario.seed,
+            )
             acquisition_function._model = model
             acquisition_function.model = model
         else:
             model = None
-        initial_design =  SobolInitialDesign(
+        initial_design = SobolInitialDesign(
             scenario=scenario,
             n_configs=n_configs,
             n_configs_per_hyperparameter=10,
-            max_ratio= 0.25,
-            additional_configs=initial_configs,)
-        initial_design.select_configurations = types.MethodType(select_configurations, initial_design) 
+            max_ratio=0.25,
+            additional_configs=initial_configs,
+        )
+        initial_design.select_configurations = types.MethodType(
+            select_configurations, initial_design
+        )
 
         facade = facade_cls(
             scenario=scenario,
@@ -423,12 +449,13 @@ class SMACOptimizer(Optimizer[SMACTrialInfo]):
             overwrite=not continue_from_last_run,
             logging_level=logging_level,
             multi_objective_algorithm=facade_cls.get_multi_objective_algorithm(
-                scenario=scenario,),
-            acquisition_maximizer = acquisition_maximizer,
-            acquisition_function = acquisition_function ,
-            model = model,
-            random_design= random_design,
-            initial_design =initial_design
+                scenario=scenario,
+            ),
+            acquisition_maximizer=acquisition_maximizer,
+            acquisition_function=acquisition_function,
+            model=model,
+            random_design=random_design,
+            initial_design=initial_design,
         )
         return cls(facade=facade, fidelities=fidelities, bucket=bucket, metrics=metrics)
 
@@ -553,13 +580,11 @@ class SMACOptimizer(Optimizer[SMACTrialInfo]):
 
     @overload
     @classmethod
-    def crash_cost(cls, metric: Metric) -> float:
-        ...
+    def crash_cost(cls, metric: Metric) -> float: ...
 
     @overload
     @classmethod
-    def crash_cost(cls, metric: Sequence[Metric]) -> list[float]:
-        ...
+    def crash_cost(cls, metric: Sequence[Metric]) -> list[float]: ...
 
     @classmethod
     def crash_cost(cls, metric: Metric | Sequence[Metric]) -> float | list[float]:

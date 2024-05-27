@@ -3,6 +3,7 @@
 This optimizer will sample from the space provided and return the results
 without doing anything with them.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -54,7 +55,7 @@ class RandomSearch(Optimizer[RSTrialInfo]):
 
     def __init__(
         self,
-        metrics:  Metric | Sequence[Metric],
+        metrics: Metric | Sequence[Metric],
         space: Space,
         bucket: PathBucket | None = None,
         seed: Seed | None = None,
@@ -62,7 +63,6 @@ class RandomSearch(Optimizer[RSTrialInfo]):
         max_sample_attempts: int = 50,
         initial_configs: list | None = None,
         limit_to_configs: list | None = None,
-       
     ):
         """Initialize the optimizer.
 
@@ -81,13 +81,18 @@ class RandomSearch(Optimizer[RSTrialInfo]):
         self.metrics = metrics
         self.seed = as_rng(seed) if seed is not None else None
         self.max_sample_attempts = max_sample_attempts
-        self.bucket = (bucket if bucket is not None else PathBucket(f"{self.__class__.__name__}-{datetime.now().isoformat()}"))
+        self.bucket = (
+            bucket
+            if bucket is not None
+            else PathBucket(f"{self.__class__.__name__}-{datetime.now().isoformat()}")
+        )
 
         # We store any configs we've seen to prevent duplicates
         self._configs_seen: list[Config] | None = [] if not duplicates else None
         self.duplicates = duplicates
         self.initial_configs = [] if initial_configs == None else initial_configs
         self.limit_to_configs = limit_to_configs
+
     @override
     def ask(self) -> Trial[RSTrialInfo]:
         """Sample from the space.
@@ -97,19 +102,21 @@ class RandomSearch(Optimizer[RSTrialInfo]):
                 Only possible to raise if `duplicates=False` (default).
         """
         name = f"random-{self.trial_count}"
-        if(len(self.initial_configs)>0):
+        if len(self.initial_configs) > 0:
             config = self.initial_configs.pop(0)
         else:
-            if(self.limit_to_configs != None):
-                config = self.limit_to_configs[np.random.randint(0, len( self.limit_to_configs))]
+            if self.limit_to_configs != None:
+                config = self.limit_to_configs[
+                    np.random.randint(0, len(self.limit_to_configs))
+                ]
             else:
                 config = self.space.sample_configuration()
                 try_number = 1
-                while config in self._configs_seen and self.duplicates==False:
+                while config in self._configs_seen and self.duplicates == False:
                     config = self.space.sample_configuration()
-                    if(try_number>=self.max_sample_attempts):
+                    if try_number >= self.max_sample_attempts:
                         break
-                    try_number +=1
+                    try_number += 1
 
         if self._configs_seen is not None:
             self._configs_seen.append(config)
@@ -121,7 +128,7 @@ class RandomSearch(Optimizer[RSTrialInfo]):
             config=dict(config),
             info=info,
             seed=self.seed.integers(MAX_INT) if self.seed is not None else None,
-            bucket = self.bucket
+            bucket=self.bucket,
         )
         self.trial_count = self.trial_count + 1
         return trial

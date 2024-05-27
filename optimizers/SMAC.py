@@ -30,6 +30,7 @@ if TYPE_CHECKING:
     from amltk.types import FidT, Seed
 
 from smac.model.random_forest.random_forest import RandomForest
+
 logger = logging.getLogger(__name__)
 from smac.initial_design.sobol_design import SobolInitialDesign
 
@@ -39,12 +40,18 @@ import numpy as np
 from ConfigSpace import ConfigurationSpace
 import types
 
-from optimizers.SMAC_utils.SMAC_utils import FixedSet, select_configurations, FixedSetRandomInitialDesign
+from optimizers.SMAC_utils.SMAC_utils import (
+    FixedSet,
+    select_configurations,
+    FixedSetRandomInitialDesign,
+)
 from smac.random_design.probability_design import ProbabilityRandomDesign
 from smac.main.config_selector import ConfigSelector
 
+
 class SMACOptimizer(Optimizer[SMACTrialInfo]):
     """An optimizer that uses SMAC to optimize a config space."""
+
     def __init__(
         self,
         *,
@@ -59,6 +66,7 @@ class SMACOptimizer(Optimizer[SMACTrialInfo]):
         self.facade = facade
         self.metrics = metrics
         self.fidelities = fidelities
+
     @classmethod
     def create(
         cls,
@@ -70,8 +78,8 @@ class SMACOptimizer(Optimizer[SMACTrialInfo]):
         seed: Seed | None = None,
         fidelities: Mapping[str, FidT] | None = None,
         logging_level: int | Path | Literal[False] | None = False,
-        n_configs = None,
-        n_trials = 100,
+        n_configs=None,
+        n_trials=100,
         initial_configs=None,
         limit_to_configs=None,
     ) -> Self:
@@ -96,63 +104,78 @@ class SMACOptimizer(Optimizer[SMACTrialInfo]):
         if isinstance(space, Node):
             space = space.search_space(parser=cls.preferred_parser())
 
-
         scenario = Scenario(
             configspace=space,
             seed=seed,
             output_directory=bucket.path / "smac3_output",
             deterministic=deterministic,
             objectives=metric_names,
-            n_trials = n_trials,
+            n_trials=n_trials,
             crash_cost=cls.crash_cost(metrics),
         )
         facade_cls = HyperparameterOptimizationFacade
-        if(limit_to_configs!=None):
+        if limit_to_configs != None:
             model = RandomForest(
-                        log_y=True,
-                        n_trees=10,
-                        bootstrapping=True,
-                        ratio_features=1.0,
-                        min_samples_split=2,
-                        min_samples_leaf=1,
-                        max_depth= 2**20,
-                        configspace=scenario.configspace,
-                        instance_features=scenario.instance_features,
-                        seed=scenario.seed
-                    )
-            
+                log_y=True,
+                n_trees=10,
+                bootstrapping=True,
+                ratio_features=1.0,
+                min_samples_split=2,
+                min_samples_leaf=1,
+                max_depth=2**20,
+                configspace=scenario.configspace,
+                instance_features=scenario.instance_features,
+                seed=scenario.seed,
+            )
+
             from smac.acquisition.function.expected_improvement import EI
+
             acquisition_function = EI(log=True)
             acquisition_function._model = model
             acquisition_function.model = model
-            
-            initial_design =  FixedSetRandomInitialDesign(
-            limit_to_configs,
-            scenario=scenario,
-            n_configs=n_configs,
-            n_configs_per_hyperparameter=10,
-            max_ratio= 0.25,
-            additional_configs=initial_configs,)
-            initial_design.select_configurations = types.MethodType(select_configurations, initial_design)
 
-            acquisition_maximizer =  FixedSet(configspace= scenario.configspace, configurations =limit_to_configs, acquisition_function=acquisition_function, seed=seed)
+            initial_design = FixedSetRandomInitialDesign(
+                limit_to_configs,
+                scenario=scenario,
+                n_configs=n_configs,
+                n_configs_per_hyperparameter=10,
+                max_ratio=0.25,
+                additional_configs=initial_configs,
+            )
+            initial_design.select_configurations = types.MethodType(
+                select_configurations, initial_design
+            )
+
+            acquisition_maximizer = FixedSet(
+                configspace=scenario.configspace,
+                configurations=limit_to_configs,
+                acquisition_function=acquisition_function,
+                seed=seed,
+            )
             random_design = ProbabilityRandomDesign(probability=0.2)
 
-            config_selector = ConfigSelector(scenario,retrain_after = 1, retries= 16+len(limit_to_configs))
-            
+            config_selector = ConfigSelector(
+                scenario, retrain_after=1, retries=16 + len(limit_to_configs)
+            )
+
         else:
             model = None
             acquisition_maximizer = None
             acquisition_function = None
             random_design = None
-            config_selector = ConfigSelector(scenario,retrain_after = 1, retries= 16 + 200)
-            initial_design =  SobolInitialDesign(
+            config_selector = ConfigSelector(
+                scenario, retrain_after=1, retries=16 + 200
+            )
+            initial_design = SobolInitialDesign(
                 scenario=scenario,
                 n_configs=n_configs,
                 n_configs_per_hyperparameter=10,
-                max_ratio= 0.25,
-                additional_configs=initial_configs,)
-            initial_design.select_configurations = types.MethodType(select_configurations, initial_design) 
+                max_ratio=0.25,
+                additional_configs=initial_configs,
+            )
+            initial_design.select_configurations = types.MethodType(
+                select_configurations, initial_design
+            )
 
         facade = facade_cls(
             scenario=scenario,
@@ -160,13 +183,14 @@ class SMACOptimizer(Optimizer[SMACTrialInfo]):
             overwrite=True,
             logging_level=logging_level,
             multi_objective_algorithm=facade_cls.get_multi_objective_algorithm(
-                scenario=scenario,),
-            acquisition_maximizer = acquisition_maximizer,
-            acquisition_function = acquisition_function ,
-            model = model,
-            random_design= random_design,
-            initial_design =initial_design,
-            config_selector = config_selector
+                scenario=scenario,
+            ),
+            acquisition_maximizer=acquisition_maximizer,
+            acquisition_function=acquisition_function,
+            model=model,
+            random_design=random_design,
+            initial_design=initial_design,
+            config_selector=config_selector,
         )
         return cls(facade=facade, fidelities=fidelities, bucket=bucket, metrics=metrics)
 
@@ -291,13 +315,11 @@ class SMACOptimizer(Optimizer[SMACTrialInfo]):
 
     @overload
     @classmethod
-    def crash_cost(cls, metric: Metric) -> float:
-        ...
+    def crash_cost(cls, metric: Metric) -> float: ...
 
     @overload
     @classmethod
-    def crash_cost(cls, metric: Sequence[Metric]) -> list[float]:
-        ...
+    def crash_cost(cls, metric: Sequence[Metric]) -> list[float]: ...
 
     @classmethod
     def crash_cost(cls, metric: Metric | Sequence[Metric]) -> float | list[float]:
