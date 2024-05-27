@@ -7,17 +7,15 @@ without doing anything with them.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import TYPE_CHECKING, Any, Callable, TypeVar
+from typing import TYPE_CHECKING, TypeVar
 from typing_extensions import ParamSpec, override
 
-from amltk.optimization.optimizer import Optimizer
-from amltk.optimization.trial import Trial
 from amltk.randomness import as_rng
 from amltk.types import Space
 
 from datetime import datetime
 
-from collections.abc import Callable, Sequence
+from collections.abc import Sequence
 
 from amltk.store.paths.path_bucket import PathBucket
 
@@ -56,7 +54,7 @@ class RandomSearch(Optimizer[RSTrialInfo]):
     def __init__(
         self,
         metrics: Metric | Sequence[Metric],
-        space: Space,
+        space: Space,  # type: ignore
         bucket: PathBucket | None = None,
         seed: Seed | None = None,
         duplicates: bool = False,
@@ -90,7 +88,7 @@ class RandomSearch(Optimizer[RSTrialInfo]):
         # We store any configs we've seen to prevent duplicates
         self._configs_seen: list[Config] | None = [] if not duplicates else None
         self.duplicates = duplicates
-        self.initial_configs = [] if initial_configs == None else initial_configs
+        self.initial_configs = [] if initial_configs is None else initial_configs
         self.limit_to_configs = limit_to_configs
 
     @override
@@ -105,14 +103,14 @@ class RandomSearch(Optimizer[RSTrialInfo]):
         if len(self.initial_configs) > 0:
             config = self.initial_configs.pop(0)
         else:
-            if self.limit_to_configs != None:
+            if self.limit_to_configs is not None:
                 config = self.limit_to_configs[
                     np.random.randint(0, len(self.limit_to_configs))
                 ]
             else:
                 config = self.space.sample_configuration()
                 try_number = 1
-                while config in self._configs_seen and self.duplicates == False:
+                while config in self._configs_seen and self.duplicates is False:
                     config = self.space.sample_configuration()
                     if try_number >= self.max_sample_attempts:
                         break

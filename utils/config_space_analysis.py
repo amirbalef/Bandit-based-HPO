@@ -1,8 +1,9 @@
+from amltk.types import Space
 import ConfigSpace
 import copy
 
 
-def make_subspaces_by_conditions(space):
+def make_subspaces_by_conditions(space: Space) -> tuple:
     space = copy.deepcopy(space)
     sub_spaces = []
     main_conditions = [
@@ -40,7 +41,7 @@ def make_subspaces_by_conditions(space):
     return sub_spaces, conditions_values, conditions_parents
 
 
-def make_initial_config(space):
+def make_initial_config(space: Space) -> list:
     initial_configs = []
     for i, (sub_space, condition_name, parent_name) in enumerate(
         zip(*make_subspaces_by_conditions(space))

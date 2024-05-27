@@ -1,0 +1,832 @@
+{
+  "stats": {
+    "submitted": 39,
+    "finished": 39,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      1791095845,
+      null,
+      0.08950000000000002,
+      6.270408630371094e-05,
+      1,
+      1716825796.4550698,
+      1716825796.4551325,
+      {}
+    ],
+    [
+      2,
+      null,
+      1791095845,
+      null,
+      0.14749999999999996,
+      8.678436279296875e-05,
+      1,
+      1716825796.5318685,
+      1716825796.5319552,
+      {}
+    ],
+    [
+      3,
+      null,
+      1791095845,
+      null,
+      0.14549999999999996,
+      6.031990051269531e-05,
+      1,
+      1716825796.6885347,
+      1716825796.688595,
+      {}
+    ],
+    [
+      4,
+      null,
+      1791095845,
+      null,
+      0.10950000000000004,
+      6.842613220214844e-05,
+      1,
+      1716825796.9704912,
+      1716825796.9705596,
+      {}
+    ],
+    [
+      5,
+      null,
+      1791095845,
+      null,
+      0.09350000000000003,
+      7.82012939453125e-05,
+      1,
+      1716825797.2434728,
+      1716825797.243551,
+      {}
+    ],
+    [
+      6,
+      null,
+      1791095845,
+      null,
+      0.11349999999999993,
+      7.009506225585938e-05,
+      1,
+      1716825797.4489295,
+      1716825797.4489996,
+      {}
+    ],
+    [
+      7,
+      null,
+      1791095845,
+      null,
+      0.1080000000000001,
+      6.914138793945312e-05,
+      1,
+      1716825797.795491,
+      1716825797.7955601,
+      {}
+    ],
+    [
+      8,
+      null,
+      1791095845,
+      null,
+      0.121,
+      8.463859558105469e-05,
+      1,
+      1716825798.130617,
+      1716825798.1307015,
+      {}
+    ],
+    [
+      9,
+      null,
+      1791095845,
+      null,
+      0.06499999999999995,
+      7.486343383789062e-05,
+      1,
+      1716825798.592094,
+      1716825798.5921688,
+      {}
+    ],
+    [
+      10,
+      null,
+      1791095845,
+      null,
+      0.05900000000000005,
+      8.0108642578125e-05,
+      1,
+      1716825798.9081082,
+      1716825798.9081883,
+      {}
+    ],
+    [
+      11,
+      null,
+      1791095845,
+      null,
+      0.09199999999999997,
+      7.724761962890625e-05,
+      1,
+      1716825799.3769896,
+      1716825799.3770669,
+      {}
+    ],
+    [
+      12,
+      null,
+      1791095845,
+      null,
+      0.08499999999999996,
+      6.890296936035156e-05,
+      1,
+      1716825799.9198186,
+      1716825799.9198875,
+      {}
+    ],
+    [
+      13,
+      null,
+      1791095845,
+      null,
+      0.09350000000000003,
+      8.440017700195312e-05,
+      1,
+      1716825800.3984437,
+      1716825800.398528,
+      {}
+    ],
+    [
+      14,
+      null,
+      1791095845,
+      null,
+      0.12149999999999994,
+      7.653236389160156e-05,
+      1,
+      1716825800.9563854,
+      1716825800.956462,
+      {}
+    ],
+    [
+      15,
+      null,
+      1791095845,
+      null,
+      0.08750000000000002,
+      7.486343383789062e-05,
+      1,
+      1716825801.5007489,
+      1716825801.5008237,
+      {}
+    ],
+    [
+      16,
+      null,
+      1791095845,
+      null,
+      0.14749999999999996,
+      7.987022399902344e-05,
+      1,
+      1716825801.9038785,
+      1716825801.9039583,
+      {}
+    ],
+    [
+      17,
+      null,
+      1791095845,
+      null,
+      0.09850000000000003,
+      7.009506225585938e-05,
+      1,
+      1716825802.5328176,
+      1716825802.5328877,
+      {}
+    ],
+    [
+      18,
+      null,
+      1791095845,
+      null,
+      0.11499999999999999,
+      7.343292236328125e-05,
+      1,
+      1716825802.9294567,
+      1716825802.9295301,
+      {}
+    ],
+    [
+      19,
+      null,
+      1791095845,
+      null,
+      0.18500000000000005,
+      6.866455078125e-05,
+      1,
+      1716825803.205559,
+      1716825803.2056277,
+      {}
+    ],
+    [
+      20,
+      null,
+      1791095845,
+      null,
+      0.16049999999999998,
+      6.29425048828125e-05,
+      1,
+      1716825803.55009,
+      1716825803.550153,
+      {}
+    ],
+    [
+      21,
+      null,
+      1791095845,
+      null,
+      0.08750000000000002,
+      6.389617919921875e-05,
+      1,
+      1716825803.9126654,
+      1716825803.9127293,
+      {}
+    ],
+    [
+      22,
+      null,
+      1791095845,
+      null,
+      0.13,
+      7.343292236328125e-05,
+      1,
+      1716825804.169065,
+      1716825804.1691384,
+      {}
+    ],
+    [
+      23,
+      null,
+      1791095845,
+      null,
+      0.0615,
+      7.2479248046875e-05,
+      1,
+      1716825804.439177,
+      1716825804.4392495,
+      {}
+    ],
+    [
+      24,
+      null,
+      1791095845,
+      null,
+      0.10299999999999998,
+      6.794929504394531e-05,
+      1,
+      1716825804.6791935,
+      1716825804.6792614,
+      {}
+    ],
+    [
+      25,
+      null,
+      1791095845,
+      null,
+      0.07950000000000002,
+      8.034706115722656e-05,
+      1,
+      1716825805.0838594,
+      1716825805.0839398,
+      {}
+    ],
+    [
+      26,
+      null,
+      1791095845,
+      null,
+      0.10699999999999998,
+      6.961822509765625e-05,
+      1,
+      1716825805.4970777,
+      1716825805.4971473,
+      {}
+    ],
+    [
+      27,
+      null,
+      1791095845,
+      null,
+      0.09299999999999997,
+      7.390975952148438e-05,
+      1,
+      1716825805.8934712,
+      1716825805.8935452,
+      {}
+    ],
+    [
+      28,
+      null,
+      1791095845,
+      null,
+      0.09299999999999997,
+      7.319450378417969e-05,
+      1,
+      1716825806.2309642,
+      1716825806.2310374,
+      {}
+    ],
+    [
+      29,
+      null,
+      1791095845,
+      null,
+      0.15500000000000003,
+      7.414817810058594e-05,
+      1,
+      1716825806.9621017,
+      1716825806.9621758,
+      {}
+    ],
+    [
+      30,
+      null,
+      1791095845,
+      null,
+      0.09299999999999997,
+      7.390975952148438e-05,
+      1,
+      1716825807.3771982,
+      1716825807.3772721,
+      {}
+    ],
+    [
+      31,
+      null,
+      1791095845,
+      null,
+      0.09899999999999998,
+      7.033348083496094e-05,
+      1,
+      1716825807.5875378,
+      1716825807.587608,
+      {}
+    ],
+    [
+      32,
+      null,
+      1791095845,
+      null,
+      0.123,
+      7.295608520507812e-05,
+      1,
+      1716825808.0822308,
+      1716825808.0823038,
+      {}
+    ],
+    [
+      33,
+      null,
+      1791095845,
+      null,
+      0.08099999999999996,
+      7.343292236328125e-05,
+      1,
+      1716825808.7383158,
+      1716825808.7383893,
+      {}
+    ],
+    [
+      34,
+      null,
+      1791095845,
+      null,
+      0.14100000000000001,
+      7.224082946777344e-05,
+      1,
+      1716825809.138619,
+      1716825809.1386912,
+      {}
+    ],
+    [
+      35,
+      null,
+      1791095845,
+      null,
+      0.126,
+      7.176399230957031e-05,
+      1,
+      1716825809.536828,
+      1716825809.5368998,
+      {}
+    ],
+    [
+      36,
+      null,
+      1791095845,
+      null,
+      0.1140000000000001,
+      8.106231689453125e-05,
+      1,
+      1716825810.089245,
+      1716825810.0893261,
+      {}
+    ],
+    [
+      37,
+      null,
+      1791095845,
+      null,
+      0.11849999999999994,
+      8.273124694824219e-05,
+      1,
+      1716825810.3399954,
+      1716825810.340078,
+      {}
+    ],
+    [
+      38,
+      null,
+      1791095845,
+      null,
+      0.11499999999999999,
+      6.985664367675781e-05,
+      1,
+      1716825810.6755188,
+      1716825810.6755886,
+      {}
+    ],
+    [
+      39,
+      null,
+      1791095845,
+      null,
+      0.1935,
+      7.128715515136719e-05,
+      1,
+      1716825810.9400795,
+      1716825810.9401507,
+      {}
+    ]
+  ],
+  "configs": {
+    "1": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "256",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.1,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 35,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.01,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.1
+    },
+    "2": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "256",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.6242606757570891,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 43,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100, 50]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.001533613235987637,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.5354961132962562
+    },
+    "3": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "256",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.18432566371600545,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 50,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.027798543061941038,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.22401200557572748
+    },
+    "4": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "256",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.0052278224214431955,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 39,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100, 50]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.019675935745941037,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.49360327844735585
+    },
+    "5": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "1024",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.08310940326797084,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 22,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.004489537265772882,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.04490324744414905
+    },
+    "6": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "512",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.39064557064680766,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 22,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[800, 400]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.007173312265287933,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.1075392761604431
+    },
+    "7": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "512",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.05604276533830355,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 32,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.027320709383189166,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.022591301744255762
+    },
+    "8": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "2048",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.2595969594525221,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 34,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.005716262795632309,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.031228610877879856
+    },
+    "9": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.09607594536689695,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 36,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.05050764650138042,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.12558704891144218
+    },
+    "10": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.11517290375915237,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 37,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.048512614817393794,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.24338859206584373
+    },
+    "11": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.5413282067273989,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 49,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.04821372290555789,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.5462986557728093
+    },
+    "12": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "256",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.21028257821094104,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 38,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.06931253668692795,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.36453300606930233
+    },
+    "13": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.08212089492823571,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 35,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.004247263570511807,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.2798684980065315
+    },
+    "14": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "1024",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.6167722379778131,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 44,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100, 50]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.053440377855629266,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.48477211305443607
+    },
+    "15": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.2215797919247332,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 22,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.004960143089814433,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.2501428157745681
+    },
+    "16": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "2048",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.05070411322605811,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 29,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.08974235041576624,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.10393466140748028
+    },
+    "17": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.013991365786131115,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 30,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.08974875871045038,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.25161112477852504
+    },
+    "18": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.6751428374526015,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 37,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100, 50]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.001540589427304658,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.1557102570707731
+    },
+    "19": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "2048",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.46470624752038414,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 49,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100, 50]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.0014454874293267045,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.6479915061971139
+    },
+    "20": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "512",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.1567472816422661,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 41,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.06831450078222204,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.4930900813464729
+    },
+    "21": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "2048",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.18922953366710024,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 24,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.0006704833176639142,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.21111904413665972
+    },
+    "22": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.38627138139328115,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 42,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[800, 400]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.08483598191521528,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.22469806896144823
+    },
+    "23": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "1024",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.6264042345246621,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 38,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.013758738840369008,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.23067989756845775
+    },
+    "24": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "512",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.304332450990704,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 37,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.022114884908502042,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.3661044725262556
+    },
+    "25": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "1024",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.4201490076919057,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 41,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.0019167715980044611,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.14070720010615717
+    },
+    "26": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "256",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.3358277091379548,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 39,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.08407418785434553,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.06997096091499505
+    },
+    "27": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "512",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.05839570480941298,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 50,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.011062848646664935,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.6733554649830603
+    },
+    "28": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.6132187935444019,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 30,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.0009448658366840143,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.2341316190472804
+    },
+    "29": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.6646997374155195,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 25,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.0008363786776891018,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.5865614352491627
+    },
+    "30": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "1024",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.12187836655899258,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 32,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.031780994131882345,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.3895005990342184
+    },
+    "31": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "512",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.48799913177984827,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 37,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100, 50]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.09585563123235417,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.17459402873951585
+    },
+    "32": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "2048",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.6343202884164582,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 21,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.08479209380262258,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.48362560779595565
+    },
+    "33": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.4599138419358,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 47,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.03888383281136287,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.28193673177122863
+    },
+    "34": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "128",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.6378380130337095,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 48,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.0580271798602293,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.23253362133888375
+    },
+    "35": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "1024",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.408382931446927,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 27,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.04472902899524112,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.655082456151752
+    },
+    "36": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "1024",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.31956392388385874,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 25,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.08552736732040143,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.0934076022219228
+    },
+    "37": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "256",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.1508701680951814,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 46,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.08794353125787312,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.19110623090573325
+    },
+    "38": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "1024",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.0698130630643278,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 37,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[400, 200]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.0018949411343821318,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.6526067160491229
+    },
+    "39": {
+      "methods:NeuralNetFastAI:NeuralNetFastAI_bs": "2048",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop": 0.15943165107650265,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_epochs": 24,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_layers": "[200, 100, 50]",
+      "methods:NeuralNetFastAI:NeuralNetFastAI_lr": 0.013589070228692421,
+      "methods:NeuralNetFastAI:NeuralNetFastAI_ps": 0.6208725468521922
+    }
+  },
+  "config_origins": {
+    "1": "Initial design",
+    "2": "Initial Design: FixedSet Random",
+    "3": "Initial Design: FixedSet Random",
+    "4": "Initial Design: FixedSet Random",
+    "5": "Fixed Set",
+    "6": "Fixed Set",
+    "7": "Fixed Set",
+    "8": "Fixed Set",
+    "9": "Fixed Set",
+    "10": "Fixed Set",
+    "11": "Fixed Set",
+    "12": "Fixed Set",
+    "13": "Fixed Set",
+    "14": "Fixed Set",
+    "15": "Fixed Set",
+    "16": "Fixed Set",
+    "17": "Fixed Set",
+    "18": "Fixed Set",
+    "19": "FixedSet Random Search",
+    "20": "FixedSet Random Search",
+    "21": "FixedSet Random Search",
+    "22": "Fixed Set",
+    "23": "Fixed Set",
+    "24": "Fixed Set",
+    "25": "Fixed Set",
+    "26": "Fixed Set",
+    "27": "Fixed Set",
+    "28": "Fixed Set",
+    "29": "FixedSet Random Search",
+    "30": "Fixed Set",
+    "31": "FixedSet Random Search",
+    "32": "Fixed Set",
+    "33": "Fixed Set",
+    "34": "Fixed Set",
+    "35": "Fixed Set",
+    "36": "Fixed Set",
+    "37": "Fixed Set",
+    "38": "Fixed Set",
+    "39": "FixedSet Random Search"
+  }
+}

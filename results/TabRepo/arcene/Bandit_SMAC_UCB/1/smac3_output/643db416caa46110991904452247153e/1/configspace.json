@@ -1,0 +1,69 @@
+{
+  "name": "NeuralNetFastAI",
+  "hyperparameters": [
+    {
+      "name": "methods:NeuralNetFastAI:NeuralNetFastAI_bs",
+      "type": "categorical",
+      "choices": [
+        "256",
+        "128",
+        "512",
+        "1024",
+        "2048"
+      ],
+      "default": "256",
+      "weights": null
+    },
+    {
+      "name": "methods:NeuralNetFastAI:NeuralNetFastAI_emb_drop",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 0.7,
+      "default": 0.1
+    },
+    {
+      "name": "methods:NeuralNetFastAI:NeuralNetFastAI_epochs",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 20,
+      "upper": 50,
+      "default": 35
+    },
+    {
+      "name": "methods:NeuralNetFastAI:NeuralNetFastAI_layers",
+      "type": "categorical",
+      "choices": [
+        "[200]",
+        "[400]",
+        "[200, 100]",
+        "[400, 200]",
+        "[800, 400]",
+        "[200, 100, 50]",
+        "[400, 200, 100]"
+      ],
+      "default": "[200]",
+      "weights": null
+    },
+    {
+      "name": "methods:NeuralNetFastAI:NeuralNetFastAI_lr",
+      "type": "uniform_float",
+      "log": true,
+      "lower": 0.0005,
+      "upper": 0.1,
+      "default": 0.01
+    },
+    {
+      "name": "methods:NeuralNetFastAI:NeuralNetFastAI_ps",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 0.7,
+      "default": 0.1
+    }
+  ],
+  "conditions": [],
+  "forbiddens": [],
+  "python_module_version": "0.6.1",
+  "json_format_version": 0.4
+}

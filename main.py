@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from pathlib import Path
 import argparse
 
@@ -166,4 +167,4 @@ if __name__ == "__main__":
         n_worker_scheduler=args.n_worker_scheduler,
     ).run()
 
-    print("Done, results are avaible in", output_path)
+    print("Done, results are avaible in ", output_path)

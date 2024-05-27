@@ -101,8 +101,6 @@ def select_configurations(initial_class) -> list[Configuration]:
         f"and {len(initial_class._additional_configs)} additional configurations."
     )
 
-    # print("initial design")
-
     return configs
 
 
@@ -259,7 +257,6 @@ class FixedSet(AbstractAcquisitionMaximizer):
             An iterable consisting of configurations.
         """
 
-        print("maximize")
         if n_points is None:
             n_points = self._challengers
 
@@ -278,7 +275,6 @@ class FixedSet(AbstractAcquisitionMaximizer):
             self._rng,
             previous_configs,
         )
-        print("challengers", challengers)
 
         if random_design is not None:
             random_design.next_iteration()

@@ -1,19 +1,45 @@
+from __future__ import annotations
+from dataclasses import dataclass
+from typing import TYPE_CHECKING, Any
+from typing_extensions import override
+
+
 from utils.config_space_analysis import make_subspaces_by_conditions
 import ConfigSpace
 import copy
 
+from amltk.optimization import Optimizer, Trial
+from amltk.types import Space
+if TYPE_CHECKING:
+    from amltk.types import Config, Seed
 
-class BanditOptimizer:
+
+@dataclass
+class BanditTrialInfo:
+    """The information about a Bandit Optimizer trial.
+
+    Args:
+        name: The name of the trial.
+        trial_number: The number of the trial.
+        config: The configuration sampled from the space.
+    """
+
+    name: str
+    trial_number: int
+    config: Config
+
+
+class BanditOptimizer(Optimizer[BanditTrialInfo]):
     def __init__(
         self,
-        space,
-        subsapce_optimizer,
-        subsapce_optimizer_parameters,
-        policy,
-        policy_parameters,
-        seed,
-        initial_configs=None,
-        limit_to_configs=None,
+        space: Space = None,
+        subsapce_optimizer: Any = None,
+        subsapce_optimizer_parameters: dict | None = None,
+        policy: Any = None,
+        policy_parameters: dict | None = None,
+        seed: Seed | None = None,
+        initial_configs: list | None = None,
+        limit_to_configs: list | None = None,
     ):
         self.space = space
         self.subsapce_optimizer = subsapce_optimizer
@@ -33,13 +59,13 @@ class BanditOptimizer:
 
         for i, sub_space in enumerate(self.subsapces):
             if "n_configs" in self.subsapce_optimizer_parameters:
-                if self.subsapce_optimizer_parameters["n_configs"] == None:
+                if self.subsapce_optimizer_parameters["n_configs"] is None:
                     self.subsapce_optimizer_parameters["n_configs"] = (
                         self.subsapce_optimizer_parameters["n_trials"]
                         // (self.number_of_arms * 4)
                     )
 
-            if self.initial_configs != None:
+            if self.initial_configs is not None:
                 config = dict(self.initial_configs[i])
                 del config[self.parent_names[i]]
                 initial_configs = [
@@ -47,9 +73,10 @@ class BanditOptimizer:
                         sub_space, values=config
                     )
                 ]
-                self.subsapce_optimizer_parameters["n_configs"] -= 1
+                if "n_configs" in self.subsapce_optimizer_parameters:
+                    self.subsapce_optimizer_parameters["n_configs"] -= 1
 
-            if self.limit_to_configs != None:
+            if self.limit_to_configs is not None:
                 limit_to_configs = []
                 for config in self.limit_to_configs:
                     if self.parent_names[i] in config:
@@ -73,7 +100,8 @@ class BanditOptimizer:
         self.selected_arm = self.policy.selected_arm
         self.last_trial_name = None
 
-    def ask(self):
+    @override
+    def ask(self) -> Trial[BanditTrialInfo]:
         self.selected_arm = self.policy.play()
         trial = self.subspace_optimizers[self.selected_arm].ask()
         trial = copy.deepcopy(trial)
@@ -91,7 +119,8 @@ class BanditOptimizer:
         ]
         return trial
 
-    def tell(self, report):
+    @override
+    def tell(self, report: Trial.Report[BanditTrialInfo]) -> None:
         report = copy.deepcopy(report)
         arm_name = report.trial.name.split("-")[1]
         self.selected_arm = self.arms_names.index(arm_name)

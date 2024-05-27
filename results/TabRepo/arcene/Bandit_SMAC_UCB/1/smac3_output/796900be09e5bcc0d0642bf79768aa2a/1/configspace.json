@@ -1,0 +1,47 @@
+{
+  "name": "ExtraTrees",
+  "hyperparameters": [
+    {
+      "name": "methods:ExtraTrees:ExtraTrees_max_features",
+      "type": "categorical",
+      "choices": [
+        "sqrt",
+        "log2",
+        "0.5",
+        "0.75",
+        "1.0"
+      ],
+      "default": "sqrt",
+      "weights": null
+    },
+    {
+      "name": "methods:ExtraTrees:ExtraTrees_max_leaf_nodes",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 5000,
+      "upper": 50000,
+      "default": 27500
+    },
+    {
+      "name": "methods:ExtraTrees:ExtraTrees_min_samples_leaf",
+      "type": "categorical",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "10",
+        "20",
+        "40",
+        "80"
+      ],
+      "default": "1",
+      "weights": null
+    }
+  ],
+  "conditions": [],
+  "forbiddens": [],
+  "python_module_version": "0.6.1",
+  "json_format_version": 0.4
+}

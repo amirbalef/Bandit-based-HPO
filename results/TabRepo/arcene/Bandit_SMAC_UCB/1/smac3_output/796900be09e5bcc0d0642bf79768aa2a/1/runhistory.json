@@ -1,0 +1,337 @@
+{
+  "stats": {
+    "submitted": 18,
+    "finished": 18,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      1791095845,
+      null,
+      0.20199999999999996,
+      7.081031799316406e-05,
+      1,
+      1716825796.4279776,
+      1716825796.4280484,
+      {}
+    ],
+    [
+      2,
+      null,
+      1791095845,
+      null,
+      0.267,
+      5.9604644775390625e-05,
+      1,
+      1716825796.66155,
+      1716825796.6616096,
+      {}
+    ],
+    [
+      3,
+      null,
+      1791095845,
+      null,
+      0.19699999999999995,
+      7.534027099609375e-05,
+      1,
+      1716825796.9416256,
+      1716825796.941701,
+      {}
+    ],
+    [
+      4,
+      null,
+      1791095845,
+      null,
+      0.127,
+      6.580352783203125e-05,
+      1,
+      1716825797.257189,
+      1716825797.2572548,
+      {}
+    ],
+    [
+      5,
+      null,
+      1791095845,
+      null,
+      0.13075000000000003,
+      5.8650970458984375e-05,
+      1,
+      1716825797.686736,
+      1716825797.6867948,
+      {}
+    ],
+    [
+      6,
+      null,
+      1791095845,
+      null,
+      0.13375000000000004,
+      6.0558319091796875e-05,
+      1,
+      1716825798.049729,
+      1716825798.0497897,
+      {}
+    ],
+    [
+      7,
+      null,
+      1791095845,
+      null,
+      0.15500000000000003,
+      7.176399230957031e-05,
+      1,
+      1716825798.4348774,
+      1716825798.4349492,
+      {}
+    ],
+    [
+      8,
+      null,
+      1791095845,
+      null,
+      0.134,
+      6.985664367675781e-05,
+      1,
+      1716825798.980149,
+      1716825798.980219,
+      {}
+    ],
+    [
+      9,
+      null,
+      1791095845,
+      null,
+      0.127,
+      6.818771362304688e-05,
+      1,
+      1716825799.8385625,
+      1716825799.8386307,
+      {}
+    ],
+    [
+      10,
+      null,
+      1791095845,
+      null,
+      0.13149999999999995,
+      7.700920104980469e-05,
+      1,
+      1716825800.47313,
+      1716825800.473207,
+      {}
+    ],
+    [
+      11,
+      null,
+      1791095845,
+      null,
+      0.1825,
+      7.128715515136719e-05,
+      1,
+      1716825801.141915,
+      1716825801.1419864,
+      {}
+    ],
+    [
+      12,
+      null,
+      1791095845,
+      null,
+      0.13175000000000003,
+      7.128715515136719e-05,
+      1,
+      1716825801.9757686,
+      1716825801.9758399,
+      {}
+    ],
+    [
+      13,
+      null,
+      1791095845,
+      null,
+      0.976,
+      8.177757263183594e-05,
+      1,
+      1716825802.6056333,
+      1716825802.605715,
+      {}
+    ],
+    [
+      14,
+      null,
+      1791095845,
+      null,
+      0.15549999999999997,
+      8.440017700195312e-05,
+      1,
+      1716825805.653881,
+      1716825805.6539655,
+      {}
+    ],
+    [
+      15,
+      null,
+      1791095845,
+      null,
+      0.15549999999999997,
+      8.7738037109375e-05,
+      1,
+      1716825806.5657997,
+      1716825806.5658875,
+      {}
+    ],
+    [
+      16,
+      null,
+      1791095845,
+      null,
+      0.21599999999999997,
+      8.082389831542969e-05,
+      1,
+      1716825807.2646623,
+      1716825807.264743,
+      {}
+    ],
+    [
+      17,
+      null,
+      1791095845,
+      null,
+      0.13149999999999995,
+      6.818771362304688e-05,
+      1,
+      1716825808.2672865,
+      1716825808.2673547,
+      {}
+    ],
+    [
+      18,
+      null,
+      1791095845,
+      null,
+      0.976,
+      6.604194641113281e-05,
+      1,
+      1716825808.8292372,
+      1716825808.8293033,
+      {}
+    ]
+  ],
+  "configs": {
+    "1": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "sqrt",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 27500,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "1"
+    },
+    "2": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "log2",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 10763,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "5"
+    },
+    "3": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "sqrt",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 30213,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "3"
+    },
+    "4": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "0.5",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 45444,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "3"
+    },
+    "5": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "0.75",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 18392,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "1"
+    },
+    "6": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "0.75",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 28310,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "2"
+    },
+    "7": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "0.5",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 43008,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "5"
+    },
+    "8": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "0.75",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 46390,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "3"
+    },
+    "9": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "0.5",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 34718,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "3"
+    },
+    "10": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "0.5",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 6337,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "4"
+    },
+    "11": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "0.5",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 36112,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "10"
+    },
+    "12": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "1.0",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 48136,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "1"
+    },
+    "13": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "0.5",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 9515,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "40"
+    },
+    "14": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "1.0",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 38595,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "3"
+    },
+    "15": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "1.0",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 45212,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "3"
+    },
+    "16": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "log2",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 46808,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "3"
+    },
+    "17": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "0.5",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 46820,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "4"
+    },
+    "18": {
+      "methods:ExtraTrees:ExtraTrees_max_features": "0.5",
+      "methods:ExtraTrees:ExtraTrees_max_leaf_nodes": 5736,
+      "methods:ExtraTrees:ExtraTrees_min_samples_leaf": "80"
+    }
+  },
+  "config_origins": {
+    "1": "Initial design",
+    "2": "Initial Design: FixedSet Random",
+    "3": "Initial Design: FixedSet Random",
+    "4": "Initial Design: FixedSet Random",
+    "5": "Initial Design: FixedSet Random",
+    "6": "Initial Design: FixedSet Random",
+    "7": "Fixed Set",
+    "8": "Fixed Set",
+    "9": "Fixed Set",
+    "10": "Fixed Set",
+    "11": "Fixed Set",
+    "12": "Fixed Set",
+    "13": "Fixed Set",
+    "14": "Fixed Set",
+    "15": "Fixed Set",
+    "16": "Fixed Set",
+    "17": "Fixed Set",
+    "18": "Fixed Set"
+  }
+}
